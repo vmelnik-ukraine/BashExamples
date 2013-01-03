@@ -27,18 +27,18 @@ screen -S s2 -p 0 -X stuff 'app/console doctrine:sharding:worker:shard^M'
 
 # 3. Activation of message service in "ms" screen
 screen -dmS ms
-screen -S m1 -p 0 -X stuff "cd $projectDir^M"
-screen -S m1 -p 0 -X stuff 'app/console archer:worker:messages:service^M'
+screen -S ms -p 0 -X stuff "cd $projectDir^M"
+screen -S ms -p 0 -X stuff 'app/console archer:worker:messages:service^M'
 
 # 4. Activation of warmup cache worker in "warmup" screen
 screen -dmS warmup
-screen -S m2 -p 0 -X stuff "cd $projectDir^M"
-screen -S m2 -p 0 -X stuff 'app/console archer:worker:messages:warmup-cache^M'
+screen -S warmup -p 0 -X stuff "cd $projectDir^M"
+screen -S warmup -p 0 -X stuff 'app/console archer:worker:messages:warmup-cache^M'
 
 # 5. Activation of user import worker in "user-import" screen
 screen -dmS user-import
-screen -S import -p 0 -X stuff "cd $projectDir^M"
-screen -S import -p 0 -X stuff 'app/console archer:worker:import:users^M'
+screen -S user-import -p 0 -X stuff "cd $projectDir^M"
+screen -S user-import -p 0 -X stuff 'app/console archer:worker:import:users^M'
 
 # 6. Activation of cache accessor worker in "ca" screen
 screen -dmS ca
