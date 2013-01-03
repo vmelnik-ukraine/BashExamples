@@ -1,3 +1,5 @@
 #BashExamples
 
-Examples for daily usage
+Examples for daily usage. The following examples are available:
+
+* [Run workers in screen for project](https://github.com/vmelnik-ukraine/BashExamples/blob/master/scripts/project-workers.sh)

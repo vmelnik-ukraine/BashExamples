@@ -27,7 +27,7 @@ screen -S s2 -p 0 -X stuff 'app/console doctrine:sharding:worker:shard^M'
 
 # 3. Activation of message service in "ms" screen
 screen -dmS ms
-screen -S m1 -p 0 -X stuff "cd $projectDir^M'
+screen -S m1 -p 0 -X stuff "cd $projectDir^M"
 screen -S m1 -p 0 -X stuff 'app/console archer:worker:messages:service^M'
 
 # 4. Activation of warmup cache worker in "warmup" screen
