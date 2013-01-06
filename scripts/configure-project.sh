@@ -16,10 +16,10 @@ function checkPermissions {
 	then
 		echo "Permissions are ok"
 	else
-		echo "Can't write to config files"
-		echo "Please, run this script as user who has write permission to next files:"
-		echo $hostsFile
-		echo $httpdConfFile
+		echo "Can't write to config files
+Please, run this script as user who has write permission to next files:
+$hostsFile
+$httpdConfFile"
 		exit 1
 	fi	
 }
@@ -112,12 +112,12 @@ function configureHosts {
 # Adds record to virtual hosts
 function configureHttpd {
 	echo "Adding record to $httpdConfFile..."
-	echo "<VirtualHost *:80>" >> $httpdConfFile
-	echo "    ServerAdmin $email" >> $httpdConfFile
-    	echo "    DocumentRoot $documentRoot" >> $httpdConfFile
-    	echo "    ServerName $projectName" >> $httpdConfFile
-    	echo "    ErrorLog $logsDirectory/$projectName" >> $httpdConfFile
-	echo "</VirtualHost>" >> $httpdConfFile
+	echo "<VirtualHost *:80>
+    ServerAdmin $email
+    DocumentRoot $documentRoot
+    ServerName $projectName
+    ErrorLog $logsDirectory/$projectName
+</VirtualHost>" >> $httpdConfFile
 	echo "Done"
 }
 
