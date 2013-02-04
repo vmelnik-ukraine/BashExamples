@@ -69,7 +69,7 @@ function setupDocumentRoot {
 			echo "Document root directory can't be empty, try again"
 			setupDocumentRoot
 		else
-			let documentRoot=tmpDocumentRoot
+			documentRoot=$tmpDocumentRoot
 		fi
 	fi
 }
